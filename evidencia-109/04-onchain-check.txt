@@ -1,0 +1,21 @@
+# Accesly login (#109) — verificación on-chain, 2026-07-29
+
+Cuenta de prueba: thalos109demo2@yopmail.com (passkey WebAuthn)
+JWT user wallet: { publicKey: GCIQLYVY7QA7NASMJDNH27UQANK6Q5E2IT6QZLXCKDIYGC3YAB7P5SC4, provider: "accesly" }
+
+G-address bridge (Horizon testnet):
+  exists: True
+  balances: USDC trustline ACTIVA + XLM
+  sponsor: GDRHSVLY3VCEHCHCSR5MZR2ALYLCERDDFT3ULCUIELGFVYHTZFCMNU4E (deployer Accesly — reservas sponsoreadas)
+  https://stellar.expert/explorer/testnet/account/GCIQLYVY7QA7NASMJDNH27UQANK6Q5E2IT6QZLXCKDIYGC3YAB7P5SC4
+
+Escrow creado y FIRMADO por el usuario Accesly (unified signer #110 → provider accesly → passkey → signRawXdr):
+  contractId: CCV4UYUFZBD5CZDXZTZU47VFLWPKWRJLEWDICJAUNRZLETX63GJ4UAHW
+  title: Freelancer Service Agreement | amount: 2 USDC
+  signer (TW): GCIQLYVY7QA7NASMJDNH27UQANK6Q5E2IT6QZLXCKDIYGC3YAB7P5SC4
+  https://stellar.expert/explorer/testnet/contract/CCV4UYUFZBD5CZDXZTZU47VFLWPKWRJLEWDICJAUNRZLETX63GJ4UAHW
+
+Nota user_wallets: el Supabase dev compartido no tiene la tabla user_wallets
+(le faltan migraciones previas del backend; existe una linked_wallets vieja).
+La persistencia con auth_provider + c_address queda cubierta por la migración
+008 del PR de backend y el fallback no-fatal del servicio.
