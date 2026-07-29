@@ -1,0 +1,14 @@
+$ node e2e-create.mjs
+# E2E headless: wallet-login → JWT → build escrow → sign (unified path) → submit
+# ThalosFrontend rama feat/unified-signer-110 · backend local :3001 · Stellar TESTNET
+
+keypair: GCDPXIUR5JRSZKLWTXRROXGJJOC2LABNA37GW3WFPQMF45SDI3YFYD7J
+friendbot: 200
+trustline USDC: ok
+challenge: Thalos Wallet Ownership Proof ...
+JWT: ok, user: 2f07a62f-de24-4a25-973b-5abb8d67bbd7
+build: ok, XDR length 4088
+send-transaction: 200 {"status":"SUCCESS","message":"The transaction has been successfully sent to the Stellar network.","contractId":"CCK75I2NSPIA7DUTZJDVABPQKFTHF6HZKTF2ZWNBKLSBRDTDX7EZI2CY", ...}
+
+Explorer: https://stellar.expert/explorer/testnet/contract/CCK75I2NSPIA7DUTZJDVABPQKFTHF6HZKTF2ZWNBKLSBRDTDX7EZI2CY
+(2do contrato creado en la misma sesión: CANLW3TWOUSEGQ7LDOS4XZS3EJNAUQ3SG7MBWHE7EEH4KQXQEADYV5AO)

@@ -1,0 +1,5 @@
+$ grep -rn "freighter-api" lib app components services --include="*.ts" --include="*.tsx"
+(sin resultados)
+
+$ grep -rn "\.signTransaction\|\.signMessage" lib app components services hooks --include="*.ts" --include="*.tsx" | grep -v "lib/signing/"
+(sin resultados — único camino de firma: lib/signing/)
